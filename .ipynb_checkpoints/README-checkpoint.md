@@ -1,5 +1,7 @@
 # SwiftLogix Supply Chain Database Design & Analysis
 
+---
+
 ## Overview
 This project focuses on designing and implementing a relational database to model real-world supply chain and logistics operations. The goal is to transform a large, unstructured dataset into a well-organized database that supports meaningful analysis of orders, products, customers, and logistics performance.
 
@@ -7,7 +9,27 @@ The project follows an end-to-end data workflow — starting from raw data extra
 
 ---
 
-## Problem Statement
+## README Index
+
+1. Problem Statement
+2. Dataset
+3. Tools & Technologies
+4. Data Modeling Approach
+   1. Conceptual Model
+   2. Physical Data Model
+5. Data Preparation
+6. Database Implementation
+7. SQL Queries & Analysis
+8. Stored Procedures & Functions
+   1. Stored Procedures
+   2. Functions
+9. Key Outcomes & Benefits
+10. How This Project Helps
+11. Repository Structure
+
+---
+
+## 1. Problem Statement
 Supply chain and logistics data is often large, complex, and difficult to analyze when stored in flat files. Without proper structure, answering questions related to customer behavior, order performance, profitability, or delivery efficiency becomes inefficient and error-prone.
 
 This project addresses that problem by:
@@ -17,7 +39,7 @@ This project addresses that problem by:
 
 ---
 
-## Dataset
+## 2. Dataset
 The dataset used in this project contains detailed supply chain transaction data, including:
 - Orders and order items
 - Product and category information
@@ -29,7 +51,7 @@ The raw dataset was initially provided as a single file and later split into mul
 
 ---
 
-## Tools & Technologies
+## 3. Tools & Technologies
 - **Python (Pandas, Jupyter Notebook)** – Data cleaning, transformation, and table generation  
 - **MySQL & MySQL Workbench** – Database creation, data loading, and querying  
 - **SQL** – Table definitions, joins, subqueries, aggregations  
@@ -37,9 +59,9 @@ The raw dataset was initially provided as a single file and later split into mul
 
 ---
 
-## Data Modeling Approach
+## 4. Data Modeling Approach
 
-### Conceptual Model
+### 4.1 Conceptual Model
 The conceptual model identifies key business entities and their relationships:
 - Customers place Orders
 - Orders contain multiple Products
@@ -50,7 +72,7 @@ Since one order can include multiple products and a product can appear in many o
 
 ---
 
-### Physical Data Model
+### 4.2 Physical Data Model
 The physical model consists of six tables:
 - Departments  
 - Categories  
@@ -69,7 +91,7 @@ Datatypes were adjusted after exploring and cleaning the data to ensure accurate
 
 ---
 
-## Data Preparation
+## 5. Data Preparation
 Data cleaning and preparation were performed in Python using Pandas:
 - Column selection and renaming
 - Removal of invalid or incomplete records
@@ -80,7 +102,7 @@ This step ensured compatibility with MySQL constraints and minimized data-loadin
 
 ---
 
-## Database Implementation
+## 6. Database Implementation
 The database was created in MySQL with:
 - Enforced referential integrity
 - Controlled load order to satisfy foreign key constraints
@@ -88,7 +110,7 @@ The database was created in MySQL with:
 
 ---
 
-## SQL Queries & Analysis
+## 7. SQL Queries & Analysis
 The project includes:
 - Basic SELECT queries ordered by primary keys
 - INNER JOIN and LEFT JOIN queries across multiple tables
@@ -101,14 +123,14 @@ These queries demonstrate how structured data enables efficient business insight
 
 ---
 
-## Stored Procedures & Functions
+## 8. Stored Procedures & Functions
 To extend database functionality:
 
-### Stored Procedures
+### 8.1 Stored Procedures
 1. **Monthly Sales Summary** – Generates order, profit, and delivery metrics for a given month  
 2. **Customer Order History** – Returns aggregated order and item-level details for a specific customer  
 
-### Functions
+### 8.2 Functions
 1. **Profit Margin Function** – Calculates profit percentage per order  
 2. **Net Item Value Function** – Computes net revenue per order item after discounts  
 
@@ -116,7 +138,7 @@ These improve reusability, readability, and performance of analytical queries.
 
 ---
 
-## Key Outcomes & Benefits
+## 9. Key Outcomes & Benefits
 - Converts raw supply chain data into a scalable relational database
 - Enables faster and more reliable analytics
 - Demonstrates real-world database design principles
@@ -124,7 +146,7 @@ These improve reusability, readability, and performance of analytical queries.
 
 ---
 
-## How This Project Helps
+## 10. How This Project Helps
 This database design can be directly applied to real logistics and e-commerce systems to:
 - Track order performance
 - Identify late delivery risks
@@ -133,7 +155,7 @@ This database design can be directly applied to real logistics and e-commerce sy
 
 ---
 
-## Repository Structure
+## 11. Repository Structure
 
 ```text
 Database-Design-Swiftlogix-Supply-Chain/
@@ -227,3 +249,4 @@ Database-Design-Swiftlogix-Supply-Chain/
 ├── .DS_Store
 └── README.md
 ```
+---
