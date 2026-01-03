@@ -303,6 +303,6 @@ Due to foreign key dependencies, tables must be populated in the following order
 
 ## 16. Database Schema / Physical Model
 
-![Physical Database Model](Screenshots/Physical%20Data%20Model/Updated%20Physical%20Data%20Model.png)
+![Physical Database Model](Screenshots/Physical%20Data%20Model/Updated%20Physical%20Data%20Model%20.png)
 
 ---
