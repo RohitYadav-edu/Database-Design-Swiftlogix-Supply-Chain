@@ -1,4 +1,4 @@
-# SwiftLogix Supply Chain Database Design & Analysis
+# Relational Database Design and Analytics for Supply Chain Management
 
 ## Overview
 This project focuses on designing and implementing a relational database to model real-world supply chain and logistics operations. The goal is to transform a large, unstructured dataset into a well-organized database that supports meaningful analysis of orders, products, customers, and logistics performance.
@@ -24,6 +24,10 @@ The project follows an end-to-end data workflow — starting from raw data extra
 9. Key Outcomes & Benefits
 10. How This Project Helps
 11. Repository Structure
+12. Quick Start (Run in 2 Minutes)
+13. Business Questions Answered
+14. Key Outcomes
+15. Data Load Order
 
 ---
 
@@ -157,7 +161,7 @@ This database design can be directly applied to real logistics and e-commerce sy
 
 ```text
 Database-Design-Swiftlogix-Supply-Chain/
-├── Dataset/
+├── Dataset/                                               # Raw and cleaned data files
 │   ├── csv Files/
 │   │   ├── Categories.csv
 │   │   ├── Customers.csv
@@ -195,14 +199,14 @@ Database-Design-Swiftlogix-Supply-Chain/
 │   ├── Question10.sql
 │   └── .DS_Store
 │
-├── Python Files/
+├── Python Files/                                          # Data preprocessing and validation scripts
 │   ├── DDP_Errors_Fixing.ipynb
 │   ├── DDP_Project_Initialization.ipynb
 │   └── .ipynb_checkpoints/
 │       ├── DDP_Errors_Fixing-checkpoint.ipynb
 │       └── DDP_Project_Initialization-checkpoint.ipynb
 │
-├── SQL Files/
+├── SQL Files/                                             # Schema definitions, queries, stored procedures
 │   ├── db_table_creation.sql
 │   ├── fn_net_item_value.sql
 │   ├── fn_profit_margin.sql
@@ -211,7 +215,7 @@ Database-Design-Swiftlogix-Supply-Chain/
 │   ├── local_infile_ON.sql
 │   └── Order_local_import.sql
 │
-├── Screenshots/
+├── Screenshots/                                           # Physical model and query outputs
 │   ├── DB and Table Creation/
 │   │   ├── Categories.png
 │   │   ├── Create Database.png
@@ -247,4 +251,58 @@ Database-Design-Swiftlogix-Supply-Chain/
 ├── .DS_Store
 └── README.md
 ```
+---
+
+## 12. Quick Start (Run in 2 Minutes)
+
+1. Create a new MySQL database
+2. Run `sql/schema.sql` to create tables
+3. Load data files in the following order:
+   - departments
+   - categories
+   - products
+   - customers
+   - orders
+   - order_items
+4. Run `sql/queries.sql` to execute analytical queries
+5. (Optional) Run stored procedures from `sql/stored_procedures.sql`
+
+---
+
+## 13. Business Questions Answered
+
+- What are the top-selling products by revenue?
+- Which customers generate the highest lifetime value?
+- Which product categories contribute most to total sales?
+- How does order volume vary across time periods?
+- Which orders are delayed and why?
+
+---
+
+## 14. Key Outcomes
+
+- Designed a normalized relational schema with 6 core tables and foreign key constraints
+- Loaded and queried thousands of transactional records
+- Implemented 10+ analytical SQL queries using joins, aggregations, and subqueries
+- Created stored procedures and user-defined functions for reusable analytics
+
+---
+
+## 15. Data Load Order
+
+Due to foreign key dependencies, tables must be populated in the following order:
+
+1. Departments
+2. Categories
+3. Products
+4. Customers
+5. Orders
+6. Order_items
+
+---
+
+## 16. Database Schema / Physical Model
+
+![Physical Database Model](Screenshots/Physical%20Data%20Model/Updated%20Physical%20Data%20Model.png)
+
 ---
