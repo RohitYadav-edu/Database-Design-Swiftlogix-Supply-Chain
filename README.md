@@ -3,7 +3,7 @@
 ## Overview
 This project focuses on designing and implementing a relational database to model real-world supply chain and logistics operations. The goal is to transform a large, unstructured dataset into a well-organized database that supports meaningful analysis of orders, products, customers, and logistics performance.
 
-The project follows an end-to-end data workflow — starting from raw data extraction and cleaning, moving through conceptual and physical data modeling, and ending with SQL-based querying, stored procedures, and functions for analytics.
+The project follows an end-to-end data workflow, starting from raw data extraction and cleaning, moving through conceptual and physical data modeling, and ending with SQL-based querying, stored procedures, and functions for analytics.
 
 ---
 
